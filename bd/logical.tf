@@ -1,5 +1,5 @@
 resource "aci_bridge_domain" "bd" {
-  tenant_dn                   = aci_tenant.tenant.id
+  tenant_dn                   = data.aci_tenant.example.id
   description                 = var.description
   name                        = var.name
   relation_fv_rs_ctx          = var.vrf_name
@@ -22,11 +22,14 @@ resource "aci_bridge_domain" "bd" {
   unk_mcast_act               = "flood"
   vmac                        = "not-applicable"
 }
+data "aci_tenant" "example" {
+  name  = "common"
+}
 resource "aci_subnet" "subnet" {
   bridge_domain_dn = aci_bridge_domain.bd.id
   ip               = var.gateway_address
   preferred        = "yes"
   scope            = "public"
-  description      = "This subnet is created by terraform"
-  relation_fv_rs_bd_subnet_to_out = var.l3out
+  description      = "This subnet is created by terraform for NewCo"
+//  relation_fv_rs_bd_to_out = var.l3out
 }

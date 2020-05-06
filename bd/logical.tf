@@ -25,6 +25,8 @@ resource "aci_bridge_domain" "bd" {
 data "aci_tenant" "example" {
   name  = "common"
 }
+// how do I create a BD without an associated subnet?
+//
 resource "aci_subnet" "subnet" {
   bridge_domain_dn = aci_bridge_domain.bd.id
   ip               = var.gateway_address

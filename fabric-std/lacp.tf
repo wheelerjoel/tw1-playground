@@ -1,6 +1,6 @@
 resource "aci_lacp_policy" "lacp_enabled" {
   description = "LACP Enabled"
-  name        = "LACP-Active"
+  name        = "NewCo-LACP-Active"
   annotation  = "tag_lacp"
   ctrl        = "fast-sel-hot-stdby,graceful-conv,susp-individual"
   max_links   = "16"
@@ -10,7 +10,7 @@ resource "aci_lacp_policy" "lacp_enabled" {
 
 resource "aci_lacp_policy" "lacp_disabled" {
   description = "LACP Disabled"
-  name        = "LACP-Disabled"
+  name        = "NewCo-LACP-Disabled"
   annotation  = "tag_lacp"
   ctrl        = "fast-sel-hot-stdby,graceful-conv"
   max_links   = "16"

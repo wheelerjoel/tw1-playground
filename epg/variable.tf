@@ -31,3 +31,26 @@ variable "bd_name" {
   description = "name for bridge domain associated to EPG"
   type = string
 }
+
+variable "flood_on_encap" {
+  description = "set flooding on encap enable/disabled"
+  type = string
+  default = "disabled"
+}
+
+variable "shutdown" {
+  description = "set shutdown yes/no"
+  type = string
+  default = "no"
+}
+
+variable "pref_group_member" {
+  description = "set prefered group membership exclude/include"
+  type = string
+  default = "include"
+}
+variable "epg_isolation" {
+  description = "set Intra EPG isolation enforced/unenforced"
+  type = string
+  default = "unenforced"
+}

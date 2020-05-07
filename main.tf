@@ -8,6 +8,6 @@ provider "aci" {
 }
 
 module "fabric_policy" {
-source = "./fabric-std"
-
+  source = "./fabric-std"
 }
+

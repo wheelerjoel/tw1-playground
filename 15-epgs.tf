@@ -6,7 +6,6 @@
 //  insecure = true
 //  // proxy_url = "https://proxy_server:proxy_port"
 //}
-
 //module "epg1" {
 //source = "./epg"
 //app_profile_name = "test1"
@@ -80,7 +79,6 @@
 //gateway_address = "172.16.32.1/24"
 //l3out = "NewCo-internal"
 //}
-
 //module "vrf1" {
 //source = "./vrf"
 //vrf_name = "NewCo-non-Prod"

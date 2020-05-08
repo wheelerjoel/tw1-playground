@@ -7,3 +7,8 @@ variable "aaep_description" {
   default = "Danger Will Robinson!"
 }
 
+variable "bd_domain_name" {
+  description = "name for domain to associate with AAEP"
+  type = list (string)
+  default = []
+}

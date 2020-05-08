@@ -28,3 +28,13 @@ module "epg3" {
   app_profile_description = "NewCo UAT environment"
 }
 
+module "epg4" {
+  source                  = "./epg"
+  app_profile_name        = "NewCo-UAT"
+  bd_name                 = "NewCo-non-prod-bd"
+  name                    = "NewCo-UAT-web"
+  description = "NewCo-UAT"
+  vlan_id                 = "1232"
+  app_profile_description = "NewCo UAT environment"
+}
+
